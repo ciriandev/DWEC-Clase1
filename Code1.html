@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Primera Clase online. Código 1.</title>
+    </head>
+
+    <body>
+        <script>
+            // cadena, numeros, booleanos, null, undefined,.... tipos.
+            "use strict";
+            //'use strict';
+            var variable1 = "hola"; // global. Sin declarar. MALA PRÁCTICA.
+            variable1 = 1;
+            variable1 = true;
+            // puedes obligar a declarar la variable usando use strict como aparece
+            // comentado en las primeras líneas.
+            // También sirve para evitar que se declaren dos parámetros de 
+            // funciones iguales, pero lo veremos en la siguiente unidad.
+            var variable2;  // Es global a este archivo.
+                            // Si estuviera en una función
+            let variable3;  // Es local al bloque donde se encuentra.
+            const PI=3.14;
+            const CONSTANTETRUE=true; // esta constante es true
+
+            for (var i = 0; i < 10; i++){ // regular.
+                console.log(i); // Salida por consola.
+            }
+            console.log(i); //existe
+
+            for (let j = 0; j < 10; j++) { //bien. esta j solo existe en este bucle
+                let j = 34; // te deja volver a declararla
+                document.write(j+"<br>");
+                                // Puedes ver esa j, pero el bucle
+                                // continua, je je javascript.
+                                // Así que atención a redeclarar en 
+                                // bucles.
+                console.log(j);
+            }
+
+            // Console tiene más opciones.
+            // Para indicar un warning por consola.
+            console.warn("Atención que no se me olvide ....\n");
+            // para indicar un error por consola.
+            console.error("Error"); //Pero no se para el programa.
+            debugger; // Si estás depuerando para aquí
+        </script>
+    </body>
+</html>
