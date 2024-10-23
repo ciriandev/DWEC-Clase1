@@ -45,7 +45,24 @@
             console.warn("Atención que no se me olvide ....\n");
             // para indicar un error por consola.
             console.error("Error"); //Pero no se para el programa.
-            debugger; // Si estás depuerando para aquí
+            //debugger; // Si estás depurando para aquí
+            
+            //Ahora el control básico de entradas.
+            //Hasta la unidad 4 no se pueden usar expresiones regulares
+            let respuesta = prompt("Mensaje", "1");
+            // Si tel no se ca a modificar se puede usar const
+            // const RESPUESTA = prompt("Mensaje", "1");
+            document.write(respuesta);
+            // alert("Atención solo para emergencias");
+            document.write("<br>" + typeof respuesta + "<br>");
+            let numeroEntero = parseInt(respuesta); //Convertimos a entero.
+            let numeroFlotante = parseFloat(respuesta); //A flotante.
+            document.write("El número es:" + numeroEntero);
+            // Forma perfecta para comprobar que algo es un número
+            // Piensa en como añadirlo al bucle de entrada.
+            if ((isNaN(numeroEntero)) && (numeroEntero)) {
+                document.write("Esto no es un número");
+            }
         </script>
     </body>
 </html>
